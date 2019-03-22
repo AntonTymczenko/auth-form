@@ -21,7 +21,7 @@ let state = {
     return options[this.index]
   },
   getNextIndex() {
-    return (this.index + 1) % options.length
+    return this.index === 0 ? 1 : 0
   },
   getAlternativeText() {
     return options[this.getNextIndex()].text
