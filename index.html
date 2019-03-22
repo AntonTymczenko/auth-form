@@ -6,8 +6,50 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Auth Form #weeklyCodingChallenge</title>
   <style>
+    :root {
+      --primary-color: lightgreen;
+    }
+    form {
+      max-width: 24rem;
+      width: 100%;
+    }
+    .form-input {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      margin: 1rem 0;
+    }
     .hidden {
       display: none;
+    }
+    input {
+      font-size: 0.875rem;
+    }
+    button, input[type='submit'] {
+      box-sizing: border-box;
+      background: none;
+      border: 1px solid grey;
+      border-radius: 0.5rem;
+      color: inherit;
+      cursor: pointer;
+      font: inherit;
+      line-height: 2em;
+      padding: 0.2rem;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      background-color: var(--primary-color);
+      font-weight: bold;
+    }
+    .alternative-action {
+      border: none;
+      font-weight: bold;
+    }
+    .alternative-action:hover, .alternative-action:focus {
+      text-decoration: underline;
     }
   </style>
 </head>
