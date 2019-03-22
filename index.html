@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Auth Form #weeklyCodingChallenge</title>
+  <style>
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<div>
+  <form action="/signin" method="POST" id="auth">
+    <div class="form-input signup-only">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name">
+    </div>
+    <div class="form-input">
+      <label for="email">Email</label>
+      <input type="text" id="email" name="email">
+    </div>
+    <div class="form-input">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password">
+    </div>
+    <div class="form-input signup-only">
+      <label for="password-again">Repeat password</label>
+      <input type="password" id="password-again" name="password-again">
+    </div>
+    <div class="form-input">
+      <input type="submit" id="auth-submit">
+    </div>
+  </form>
+  <label for="auth-switch"></label>
+  <button id="auth-switch" class="alternative-action"></button>
+</div>
+
+<script src="authForm.js"></script>
+</body>
+</html>
