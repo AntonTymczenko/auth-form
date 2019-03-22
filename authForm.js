@@ -1,35 +1,30 @@
 // customization:
-const submitTextOptions = ['Sign in', 'Sign up']
-const alternativeActionHints = ['Don\'t have an account?', 'Already have an account?']
-const alternativeActionHintTail = 'Try to'
-const paths = ['/login', '/register']
-
-// action options
-const actions = [
+const options = [
   {
-    path: paths[0],
-    text: submitTextOptions[0],
-    alternativeHint: alternativeActionHints[0],
+    text: 'Sign in',
+    alternativeHint: 'Don\'t have an account?',
+    path: '/login',
   },
   {
-    path: paths[1],
-    text: submitTextOptions[1],
-    alternativeHint: alternativeActionHints[1],
+    text: 'Sign up',
+    alternativeHint: 'Already have an account?',
+    path: '/register',
   },
 ]
+const alternativeActionHintTail = 'Try to'
 
 
 // core object
 let state = {
   index: 0,
   getAction() {
-    return actions[this.index]
+    return options[this.index]
   },
   getNextIndex() {
-    return (this.index + 1) % actions.length
+    return (this.index + 1) % options.length
   },
   getAlternativeText() {
-    return actions[this.getNextIndex()].text
+    return options[this.getNextIndex()].text
   },
   toggle() {
     this.index = this.getNextIndex()
