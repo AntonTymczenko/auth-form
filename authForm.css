@@ -64,7 +64,7 @@ button, input[type='submit'] {
 }
 
 input[type="submit"] {
-  width: 100%;
+  min-width: 10rem;
   background-color: var(--primary-color);
   font-weight: bold;
 }
