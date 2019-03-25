@@ -13,8 +13,10 @@
       max-width: 24rem;
       width: 100%;
     }
-    .form-input {
+    form > div {
       width: 100%;
+    }
+    .form-input {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
@@ -51,12 +53,36 @@
     .alternative-action:hover, .alternative-action:focus {
       text-decoration: underline;
     }
+    .social-container {
+      display: flex;
+      justify-content: center;
+    }
+    a.social {
+      text-decoration: none;
+      color: var(--border-color);
+      border-radius: 50%;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 5px;
+      height: 40px;
+      width: 40px;
+    }
+    a.social:hover, a.social:focus {
+      color: inherit;
+    }
   </style>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 <body>
 
 <div>
   <form action="/signin" method="POST" id="auth">
+    <div class="social-container">
+      <a href="#" class="social" title="Authorize with Facebook account"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="social" title="Authorize with Google+ account"><i class="fab fa-google-plus-g"></i></a>
+      <a href="#" class="social" title="Authorize with LinkedIn account"><i class="fab fa-linkedin-in"></i></a>
+    </div>
     <div class="form-input signup-only">
       <label for="name">Name</label>
       <input type="text" id="name" name="name">
