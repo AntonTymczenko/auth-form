@@ -13,7 +13,8 @@
 <body>
 
 <div class="auth-form-container">
-  <form action="/signin" method="POST" id="auth">
+  <div class="auth-form">
+  <form action="/signin" method="POST" id="auth" class="animated">
     <div class="social-container">
       <a href="#" class="social" title="Authorize with Facebook account"><i class="fab fa-facebook-f"></i></a>
       <a href="#" class="social" title="Authorize with Google+ account"><i class="fab fa-google-plus-g"></i></a>
@@ -52,6 +53,7 @@
       </div>
     </div>
   </form>
+  </div>
   <div class="alternative-action-container">
     <label for="auth-switch"></label>
     <button id="auth-switch" class="alternative-action"></button>

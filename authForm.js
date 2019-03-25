@@ -1,4 +1,5 @@
 // customization:
+const animationHalfPeriod = 500 // make sure to match with CSS variable '--animation-half-period'
 const options = [
   {
     text: 'Sign in',
@@ -27,8 +28,14 @@ let state = {
     return options[this.getNextIndex()].text
   },
   toggle() {
-    this.index = this.getNextIndex()
-    this.setAction()
+    authForm.classList.remove('goAway', 'comeBack')
+    authForm.classList.add('goAway')
+    setTimeout(() => {
+      this.index = this.getNextIndex()
+      this.setAction()
+      authForm.classList.remove('goAway')
+      authForm.classList.add('comeBack')
+    }, animationHalfPeriod)
   },
   setAction() {
     const current = this.getAction()

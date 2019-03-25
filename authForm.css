@@ -2,6 +2,7 @@
   --primary-color: lightgreen;
   --border-color: #ddd;
   --box-size: 28rem;
+  --animation-half-period: 0.5s;
 }
 * {
   box-sizing: border-box;
@@ -25,6 +26,9 @@ body {
   max-width: var(--box-size);
   padding: 2rem;
   background-image: linear-gradient(to right, linen, papayawhip);
+}
+.auth-form {
+  overflow: hidden;
 }
 form {
   display: flex;
@@ -121,11 +125,83 @@ a.social:hover, a.social:focus {
     width: 50%;
     max-width: none;
   }
-  form {
+  .auth-form {
     background-image: linear-gradient(to right, linen, papayawhip);
   }
   .alternative-action-container {
     padding-top: 2rem;
     background-image: linear-gradient(to right, papayawhip, linen);
   }
+}
+
+
+/* ANIMATION */
+
+.animated {
+  -webkit-animation-duration: var(--animation-half-period, 0.5s);
+  animation-duration: var(--animation-half-period);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes slideOutLeft {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    -webkit-transform: translate3d(-150%, 0, 0);
+    transform: translate3d(-150%, 0, 0);
+  }
+}
+
+@keyframes slideOutLeft {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    -webkit-transform: translate3d(-150%, 0, 0);
+    transform: translate3d(-150%, 0, 0);
+  }
+}
+
+@-webkit-keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(-150%, 0, 0);
+    transform: translate3d(-150%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(-150%, 0, 0);
+    transform: translate3d(-150%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.goAway{
+  -webkit-animation-name: slideOutLeft;
+  animation-name: slideOutLeft;
+}
+
+.comeBack {
+  -webkit-animation-name: slideInRight;
+  animation-name: slideInRight;
 }
