@@ -44,9 +44,7 @@ form > div {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: baseline;
-}
-.hidden {
-  display: none;
+
 }
 input {
   font-size: 0.875rem;
@@ -134,6 +132,10 @@ a.social:hover, a.social:focus {
   }
 }
 
+/* global */
+.hidden {
+  display: none;
+}
 
 /* ANIMATION */
 
