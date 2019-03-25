@@ -92,9 +92,10 @@ input[type="submit"] {
 }
 a {
   text-decoration: none;
-  color: var(--primary-color);
+  color: var(--border-color);
 }
 a:hover, a:focus {
+  color: var(--primary-color);
   text-decoration: underline;
 }
 a.social {
@@ -109,7 +110,7 @@ a.social {
   width: 40px;
 }
 a.social:hover, a.social:focus {
-  color: inherit;
+  color: var(--primary-color);
   text-decoration: none;
 }
 
