@@ -64,6 +64,10 @@ input[type="submit"] {
   background-color: var(--primary-color);
   font-weight: bold;
 }
+.form-checkbox {
+  display: flex;
+  align-items: center;
+}
 .alternative-action-container {
   display: flex;
   justify-content: center;
