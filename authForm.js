@@ -44,6 +44,7 @@ let state = {
     authModeSwitch.innerText = this.getAlternativeText()
     authModeSwitch.labels[0].innerText = this.getAction().alternativeHint + ' ' + alternativeActionHintTail
     clearUpTemplate()
+    setSocialLinksPaths()
   },
 }
 
@@ -67,6 +68,12 @@ function clearUpTemplate() {
   }
 }
 
+function setSocialLinksPaths() {
+  socialLinks.forEach(l => {
+    l.href = state.getAction().path + '?social=' + l.dataset.socialType
+  })
+}
+
 function showValidationFeedback(err) {
   err.forEach(e => console.error(e))
 }
@@ -76,6 +83,7 @@ function showValidationFeedback(err) {
 // initialize:
 
 const authForm = document.getElementById('auth')
+const socialLinks = document.querySelectorAll('.social')
 const submitButton = document.getElementById('auth-submit')
 const authModeSwitch = document.getElementById('auth-switch')
 
