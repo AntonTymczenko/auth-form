@@ -29,8 +29,11 @@ body {
 }
 .auth-form {
   overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 form {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
