@@ -1,0 +1,67 @@
+:root {
+  --primary-color: lightgreen;
+  --border-color: #ddd;
+}
+form {
+  max-width: 24rem;
+  width: 100%;
+}
+form > div {
+  width: 100%;
+}
+.form-input {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 1rem 0;
+}
+.hidden {
+  display: none;
+}
+input {
+  font-size: 0.875rem;
+}
+button, input[type='submit'] {
+  box-sizing: border-box;
+  background: none;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  line-height: 2em;
+  padding: 0.2rem;
+}
+
+input[type="submit"] {
+  width: 100%;
+  background-color: var(--primary-color);
+  font-weight: bold;
+}
+.alternative-action {
+  border: none;
+  font-weight: bold;
+}
+.alternative-action:hover, .alternative-action:focus {
+  text-decoration: underline;
+}
+.social-container {
+  display: flex;
+  justify-content: center;
+}
+a.social {
+  text-decoration: none;
+  color: var(--border-color);
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+  height: 40px;
+  width: 40px;
+}
+a.social:hover, a.social:focus {
+  color: inherit;
+}
