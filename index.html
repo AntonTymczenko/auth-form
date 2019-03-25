@@ -8,6 +8,7 @@
   <style>
     :root {
       --primary-color: lightgreen;
+      --border-color: #ddd;
     }
     form {
       max-width: 24rem;
@@ -32,7 +33,7 @@
     button, input[type='submit'] {
       box-sizing: border-box;
       background: none;
-      border: 1px solid grey;
+      border: 1px solid var(--border-color);
       border-radius: 0.5rem;
       color: inherit;
       cursor: pointer;
@@ -60,6 +61,7 @@
     a.social {
       text-decoration: none;
       color: var(--border-color);
+      border: 1px solid var(--border-color);
       border-radius: 50%;
       display: inline-flex;
       justify-content: center;
