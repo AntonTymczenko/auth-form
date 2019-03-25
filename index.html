@@ -12,7 +12,7 @@
 </head>
 <body>
 
-<div>
+<div class="auth-form-container">
   <form action="/signin" method="POST" id="auth">
     <div class="social-container">
       <a href="#" class="social" title="Authorize with Facebook account"><i class="fab fa-facebook-f"></i></a>
@@ -29,8 +29,12 @@
     </div>
     <div class="form-input">
       <label for="password">Password</label>
-      <input type="password" id="password" name="password">
-      <p class="signin-only"><a href="/password-recovery">Forgot your password?</a> </p>
+      <div>
+        <input type="password" id="password" name="password">
+        <div class="signin-only">
+          <a href="/password-recovery">Forgot your password?</a>
+        </div>
+      </div>
     </div>
     <div class="form-input signup-only">
       <label for="password-again">Repeat password</label>

@@ -1,20 +1,45 @@
 :root {
   --primary-color: lightgreen;
   --border-color: #ddd;
+  --box-size: 28rem;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.auth-form-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.auth-form-container > * {
+  width: 100%;
+  max-width: var(--box-size);
+  padding: 2rem;
+  background-image: linear-gradient(to right, linen, papayawhip);
 }
 form {
-  max-width: 24rem;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 form > div {
   width: 100%;
+  padding: 0.8rem 0;
 }
 .form-input {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: baseline;
-  margin: 1rem 0;
 }
 .hidden {
   display: none;
@@ -39,6 +64,12 @@ input[type="submit"] {
   background-color: var(--primary-color);
   font-weight: bold;
 }
+.alternative-action-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0;
+}
 .alternative-action {
   border: none;
   font-weight: bold;
@@ -50,8 +81,14 @@ input[type="submit"] {
   display: flex;
   justify-content: center;
 }
-a.social {
+a {
   text-decoration: none;
+  color: var(--primary-color);
+}
+a:hover, a:focus {
+  text-decoration: underline;
+}
+a.social {
   color: var(--border-color);
   border: 1px solid var(--border-color);
   border-radius: 50%;
@@ -64,4 +101,27 @@ a.social {
 }
 a.social:hover, a.social:focus {
   color: inherit;
+  text-decoration: none;
+}
+
+/* for wider screens: */
+
+@media (min-width: 48rem) {
+  .auth-form-container {
+    flex-wrap: nowrap;
+    height: var(--box-size);
+    width: calc( 2 * var(--box-size));
+  }
+  .auth-form-container > * {
+    height: 100%;
+    width: 50%;
+    max-width: none;
+  }
+  form {
+    background-image: linear-gradient(to right, linen, papayawhip);
+  }
+  .alternative-action-container {
+    padding-top: 2rem;
+    background-image: linear-gradient(to right, papayawhip, linen);
+  }
 }
