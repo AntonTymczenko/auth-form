@@ -20,12 +20,12 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  background-image: linear-gradient(to right, linen, papayawhip);
 }
 .auth-form-container > * {
   width: 100%;
   max-width: var(--box-size);
   padding: 2rem;
-  background-image: linear-gradient(to right, linen, papayawhip);
 }
 .auth-form {
   overflow: hidden;
@@ -121,18 +121,15 @@ a.social:hover, a.social:focus {
     flex-wrap: nowrap;
     height: var(--box-size);
     width: calc( 2 * var(--box-size));
+    background-image: linear-gradient(to right, linen, papayawhip, linen);
   }
   .auth-form-container > * {
     height: 100%;
     width: 50%;
     max-width: none;
   }
-  .auth-form {
-    background-image: linear-gradient(to right, linen, papayawhip);
-  }
   .alternative-action-container {
     padding-top: 2rem;
-    background-image: linear-gradient(to right, papayawhip, linen);
   }
 }
 
