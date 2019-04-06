@@ -9,5 +9,6 @@
 - [ ] animate submit button text's change
 - [ ] do some validation
 - [ ] show validation feedback
+- [x] observe "email" field and change 'pswd-recovery' link GET query accordingly
 
 - [ ] refactor. Make sure there's no conflicts in naming of CSS classes and JS variables when this form will be put into larger document

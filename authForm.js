@@ -83,6 +83,8 @@ function showValidationFeedback(err) {
 // initialize:
 
 const authForm = document.getElementById('auth')
+const email = document.getElementById('email')
+const forgotPassLink = document.getElementById('forgot')
 const socialLinks = document.querySelectorAll('.social')
 const submitButton = document.getElementById('auth-submit')
 const authModeSwitch = document.getElementById('auth-switch')
@@ -110,6 +112,10 @@ authForm.addEventListener('submit', e => {
 
 authModeSwitch.addEventListener('click', e => {
   state.toggle()
+})
+
+email.addEventListener('change', e => {
+  forgotPassLink.href = forgotPassLink.href.split('?')[0] + '?email=' + e.target.value
 })
 
 state.setAction() // initial set up
