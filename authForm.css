@@ -133,6 +133,20 @@ a.social:hover, a.social:focus {
   }
 }
 
+
+/* smallest screens: */
+@media (max-width: 23rem) {
+  .form-input {
+    flex-direction: column;
+  }
+  .form-input label:first-child {
+    padding-bottom: 0.5rem;
+  }
+  .form-input input[type="submit"] {
+    margin-bottom: 0.7rem;
+  }
+}
+
 /* global */
 .hidden {
   display: none;
